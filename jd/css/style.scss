@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+*{margin: 0;
+  padding: 0;
+}
+
+body{
+    font-family: arial;
+    font-size:10px;
+}
+$color :red;
+$size:20px;
+li{
+    color: $color;
+    font-size: $size;
+}
+nav{
+    width: 600px;
+    height: 50px;
+    li{
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+        
+        a{
+            font-size: 12px;
+            color: red;
+        }
+        
+    }
+}
+//这个不被继承
+/*这个会被继承过去*/
+
+    a{
+        &:hover{
+            color: red
+        }
+    }
+//定义一个
+.public{
+    width:20px;
+    height: 30px;
+}
+
+
+   p{
+       @extend .public;
+       height: 50px;
+       
+   }
+   
+    #nva{
+        @extend .public;
+        height: 100px;
+        ul{
+            margin-right: 10px;
+            li{
+                list-style: none;
+                a{
+                    &:hover{
+                        color: $color;
+                    }
+                }
+            }
+            
+            
+        }
+    }
+@mixin comment($h,$w){
+    width: $w;
+    height: $h;
+    height: 400px;
+}
+
+#header{
+    @include comment(100px,200px);
+    
+}
+
+$ad : red

@@ -1,0 +1,64 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial;
+  font-size: 10px;
+}
+
+li {
+  color: red;
+  font-size: 20px;
+}
+
+nav {
+  width: 600px;
+  height: 50px;
+}
+nav li {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+}
+nav li a {
+  font-size: 12px;
+  color: red;
+}
+
+/*这个会被继承过去*/
+a:hover {
+  color: red;
+}
+
+.public, p, #nva {
+  width: 20px;
+  height: 30px;
+}
+
+p {
+  height: 50px;
+}
+
+#nva {
+  height: 100px;
+}
+#nva ul {
+  margin-right: 10px;
+}
+#nva ul li {
+  list-style: none;
+}
+#nva ul li a:hover {
+  color: red;
+}
+
+#header {
+  width: 200px;
+  height: 100px;
+  height: 400px;
+}
+
+/*# sourceMappingURL=style.css.map */
